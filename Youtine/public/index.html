@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Youtine</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/8.2.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/8.2.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/8.2.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/8.2.1/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCQj_mRSxqxJXcAkG1G721RH-u4s6UwFPo",
+      authDomain: "myyoutine.firebaseapp.com",
+      projectId: "myyoutine",
+      storageBucket: "myyoutine.appspot.com",
+      messagingSenderId: "253431016309",
+      appId: "1:253431016309:web:6b917f58c06ba28442013c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+
+    .jumbotron {
+      color: #ffffff;
+      height: 102vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-bottom: solid #000000;
+      border-bottom-width: 2vh;
+      overflow: hidden;
+    }
+
+    .fullScreen {
+      height: 100vh;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .btn {
+      border-radius: 30px;
+      font-size: 2vh
+    }
+  </style>
+
+  <script>
+    $(document).ready(function() {
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        if (this.hash !== "") {
+          event.preventDefault();
+
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 500, function() {
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
+</head>
+
+<body style="background-color:#000000">
+  <nav class="navbar navbar-fixed-top" style="background-color: #000000">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar" style="background-color:white"></span>
+          <span class="icon-bar" style="background-color:white"></span>
+          <span class="icon-bar" style="background-color:white"></span>
+        </button>
+        <a class="navbar-brand" href="#" style="color:white">Youtine</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../" style="color:white">Home</a></li>
+          <li><a href="#info" style="color:white">Info</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Just need to style the buttons and maybe add an info bit?
+  Using Bootstrap-->
+  <div class="fullScreen text-center jumbotron" style="padding-top:60vh; background-image: url('backer.jpg')">
+    <h1>Youtine</h1>
+    <h4 class="text-muted">A COVID-friendly solution to your team workout schedule</h4>
+    <button class="btn btn-lge btn-primary">Sign Up</button><br>
+    <button class="btn btn-lge btn-danger" style="margin-top:2vh">Log In</button>
+    </font>
+  </div>
+  <div class="fullScreen jumbotron" id="info" style="background-color:#000000">
+
+    <!--Info with some details on how it works-->
+  </div>
+
+
+  <script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+  <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.14.2/firebase-storage.js"></script>
+</body>
+
+</html>
