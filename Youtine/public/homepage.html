@@ -94,7 +94,7 @@
 </head>
 
 <body style="background-color:#000000">
-  <nav class="navbar navbar-fixed-top" style="background-color: #000000">
+  <nav class="navbar navbar-fixed-top" style="background-image: url('backer.jpg')">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -112,34 +112,62 @@
       </div>
     </div>
   </nav>
-  <!--Just need to style the buttons and maybe add an info bit?
-  Using Bootstrap-->
-  <div class="fullScreen text-center jumbotron" style="padding-top:60vh; background-image: url('backer.jpg')">
-    <h1>Youtine</h1>
-    <h4 class="text-muted">A COVID-friendly solution to your team workout schedule</h4>
-    <center>
-    <input class="form-control text-center"style="border-radius:15px; width:30vh; margin-top:3vh" id="input" placeholder="Put your unique code here" min="6" max="6"></input><br>
-  </center>
-    <button class="btn btn-lge btn-danger" style="" onclick="reassign()">Begin</button>
+  <div class="jumbotron fullscreen" style="background-color:#000000;">
+    <h1 class="text-center">Team Homepage</h1>
+    <div style="padding-left:5vw; padding-right:5vw; padding-top:5vh">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Excercise</th>
+            <th scope="col">Done</th>
+            <th scope="col">Set</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pushups</td>
+            <td id="pushupDone">0</td>
+            <td id="pushupSet">0</td>
+          </tr>
+          <tr>
+            <td>Runs</td>
+            <td id="runsDone">0</td>
+            <td id="runsSet">0</td>
 
-    </font>
-  </div>
-  <div class="fullScreen jumbotron" id="info" style="background-color:#000000">
+          </tr>
+          <tr>
+            <td>Jumping Jacks</td>
+            <td id="jjDone">0</td>
+            <td id="jjSet">0</td>
+          </tr>
+          <tr>
+            <td>Planks</td>
+            <td id="planksDone">0</td>
+            <td id="planksSet">0</td>
+          </tr>
+        </tbody>
 
-    <!--Info with some details on how it works-->
+      </table>
+    </div>
+    <!--Start button for tracking an activity, a collapsable-->
+
+    <div style="padding: 5vh">
+      <h3> Begin or Record Your Own Workout</h3>
+
+    </div>
+
   </div>
+
+
+
+
 
 
   <script src="/__/firebase/7.14.2/firebase-app.js"></script>
 
   <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
   <script src="/__/firebase/7.14.2/firebase-storage.js"></script>
-  <script>
-    function reassign(){
-      var input = document.getElementById('input').value || 0;
-      window.location.assign('../homepage?code=' + input);
-    }
-  </script>
+
 </body>
 
 </html>
